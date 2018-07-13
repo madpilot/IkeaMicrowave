@@ -30,7 +30,7 @@ void timerIsr() {
   if(running) {
     milli -= 1;
   }
-  sleepTimer--;
+  sleepTimer -= 1;
 }
 
 void feedSleepTimer() {
