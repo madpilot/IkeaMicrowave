@@ -49,8 +49,8 @@ void goToSleep() {
   sleep_mode();
   // Zzzzz. When we wake, we resume here...
   sleep_disable();
-  detachInterrupt(SLEEP_INTERRUPT_2);
-  detachInterrupt(SLEEP_INTERRUPT_1);
+  detachInterrupt(digitalPinToInterrupt(SLEEP_INTERRUPT_2));
+  detachInterrupt(digitalPinToInterrupt(SLEEP_INTERRUPT_1));
 
   // Run setup again, so everything is back to the initial state
   setup();
